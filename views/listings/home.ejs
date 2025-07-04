@@ -1,0 +1,88 @@
+<% layout("/layouts/boilerplate.ejs") %>
+
+    <!-- <form action="/listings/new" method="get">
+        <button>Add New Location</button>
+    </form> -->
+
+    <style>
+        .filter{
+            text-align: center;
+            margin-right: 1rem;
+            opacity: 0.7;
+        }
+        .filters{
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+        .filter:hover{
+            opacity: 1;
+            cursor: pointer;
+        }
+    </style>
+
+
+    <div class="filters">
+        <div class="filter">
+          <div>  <i class="fa-solid fa-fire"></i></div>
+           <p> Trending</p>
+        </div>
+        <div class="filter">
+          <div>  <i class="fa-solid fa-bed"></i></div>
+           <p> Rooms</p>
+        </div>
+        <div class="filter">
+          <div>  <i class="fa-solid fa-mountain-city"></i></div>
+           <p> Iconic Cities</p>
+        </div>
+        <div class="filter">
+          <div>  <i class="fa-solid fa-mountain"></i></div>
+           <p> Mountain</p>
+        </div>
+        <div class="filter">
+          <div> <i class="fa-solid fa-chess-rook"></i></div>
+           <p> Castle</p>
+        </div>
+        <div class="filter">
+          <div>  <i class="fa-solid fa-person-swimming"></i></div>
+           <p> Swimming</p>
+        </div>
+        <div class="filter">
+          <div>  <i class="fa-solid fa-campground"></i></div>
+           <p> Camping</p>
+        </div>
+        <div class="filter">
+          <div>  <i class="fa-solid fa-cow"></i></div>
+           <p> Farms</p>
+        </div>
+        <div class="filter">
+          <div><i class="fa-solid fa-house"></i></div>
+           <p>Tiny Homes</p>
+        </div>
+        <div class="filter">
+          <div><i class="fa-solid fa-umbrella-beach"></i></div>
+           <p> Beach</p>
+        </div>
+        <div class="filter">
+          <div>  <i class="fa-regular fa-snowflake"></i></div>
+           <p> Snow City</p>
+        </div>
+        
+    </div>
+
+
+    <div class="row row-cols-lg-3 row-cols-md-2 row-cols-md-1">
+         <%for(let listing of data){%>
+            <a href="/listings/<%= listing._id %>">
+        <div class="card">
+            <img src="<%=listing.image.url%>" class="card-img-top" alt="listing_image" style="height: 25rem;">
+            <div class="card-img-overlay">WonDaze</div>
+            <div class="card-body">
+                <h5 class="card-title"><b><%=listing.title%></b></h5>
+                <p class="list-group-item"> <b>  <%=listing.price%>$ for 2 nights</b></P>  
+            </div>
+        </div>
+        </a>
+<%}%>
+    </div>

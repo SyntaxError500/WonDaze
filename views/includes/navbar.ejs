@@ -1,0 +1,30 @@
+          <div class="navbar">
+  <div class="logo">
+    <!-- <img src="/extra/logo.png" class="logo-img fa-lg" alt=""> -->
+    <b>WonDaze</b>
+  </div>
+
+  <!-- DESKTOP LINKS -->
+  <div class="links desktop-links" role="group" aria-label="Basic example">
+    <button class="bttn"><a href="/listings">All</a></button>
+    <button class="bttn"><a href="/listings">Home</a></button>
+    <button class="bttn"><a href="/listings/new">Add new <i class="fas fa-search"></i></a></button>
+  </div>
+
+  <!-- MOBILE LINKS -->
+  <div class="links mobile-links">
+    <button class="bttn"><a href="/listings">Home</a></button>
+  </div>
+
+   <div class="info">
+            <%if(!currUser){%>
+            <a href="/login" class="host btn">Login</a>
+            <a href="/Signup" class="host btn">Sign up</a>
+           <% } else{%>
+            <a href="/logout" class="host btn">Log out</a>
+             <% }%>
+
+              <a href="#"><i class="fas fa-globe"></i></a>  
+              <a href="#"><i class="fas fa-bars"></i></a>  
+        </div>
+</div>
