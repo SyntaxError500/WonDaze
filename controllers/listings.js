@@ -68,7 +68,7 @@ module.exports.update = async (req, res) => {
     // console.log(list);
     }
     req.flash("success","Listing is updated!");
-    res.redirect(`/listings${id}`);
+    res.redirect("/listings");
 }
 
 //delete function
